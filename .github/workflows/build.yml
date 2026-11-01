@@ -13,9 +13,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: Code/HonzoReader
 
     steps:
       - name: Checkout
@@ -61,7 +58,7 @@ jobs:
       - name: Commit HonzoReader.tar if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: Code/HonzoReader/HonzoReader.tar
+          file_pattern: HonzoReader.tar
           commit_message: "chore: auto-build HonzoReader.tar"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
